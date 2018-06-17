@@ -1,0 +1,80 @@
+---
+title: "kamilstoch"
+author: "ANIA"
+date: "17 06 2018"
+output:
+  rmarkdown::html_document:
+    theme: spacelab
+---
+# Kamil Stoch
+
+## Polski skoczek narciarski
+
+![Kamil Stoch]
+
+[Kamil Stoch]: https://www.skijumping.pl/newsy/zdjecia/powieksz/stoch2_2018-02-18_03-59-15.jpg
+
+Zawodnik klubu KS Eve-nement Zakopane, reprezentant Polski i czterokrotny olimpijczyk.
+
+Osiągnięcia na Igrzyskach Olimpijskich:
+
+ - **złoto** skocznia normalna Soczi 2014
+- **złoto** skocznia duża Soczi 2014
+- **złoto** skocznia duża Pjongczang 2018
+- **brąz**  drużynowo skocznia duża Pjongczang 2018
+
+Miejsca w klasyfikacji generalnej Pucharu Świata:
+
+| sezon | miejsce |
+|-------|---------|
+|2004/2005|53|
+|2005/2006|45|
+|2006/2007|30|
+|2007/2008|30|
+|2008/2009|30|
+|2009/2010|24|
+|2010/2011|10|
+|2011/2012|5|
+|2012/2013|3|
+|2013/2014|1|
+|2014/2015|9|
+|2015/2016|22|
+|2016/2017|2|
+|2017/2018|1|
+
+
+Wygrana w klasycfikacji generalnej Pucharu Świata:
+
+1. sezon 2013/2014
+2. sezon 2017/2018
+
+[Dużo więcej różnych informacji o Kamilu](https://pl.wikipedia.org/wiki/Kamil_Stoch)
+
+
+##A teraz czas na dziwne, niepowiązane z Kamilem Stochem, potrzebne do zaliczenia rzeczy:
+
+Cytuję mądry kod `library(tidyverse)`
+
+
+```{r echo=FALSE}
+library(tidyverse)
+ggplot(data = mpg) +
+  geom_histogram (mapping = aes(displ), bins = 10) +
+  labs(title = "Rozkład pojemności silnika samochodów w zbiorze", x = "Pojemność silnika") 
+```
+
+
+
+
+```{r}
+library(tidyverse)
+group_by (mpg, class)
+```
+
+A teraz coś co jest, mimo, że nie widać, że to jest:
+
+```{r include=FALSE}
+library(tidyverse)
+select(mpg, cty) %>% 
+  arrange(desc(cty))
+```
